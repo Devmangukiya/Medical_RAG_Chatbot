@@ -11,7 +11,7 @@ def load_llm(huggingface_repo_id: str = HUGGINGFACE_REPO_ID, hf_token: str = HF_
         logger.info("Loading LLM from Huggingface.")
 
         llm = ChatOpenAI(
-            model_name="gpt-3.5-turbo",
+            model_name="gpt-4o",
             temperature=0.7,
             openai_api_key=OPENAI_TOKEN
         )

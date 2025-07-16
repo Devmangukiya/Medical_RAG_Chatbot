@@ -12,15 +12,23 @@ from app.common.custom_exception import CustomException
 
 logger = get_logger(__name__)
 
-CUSTOM_PROMPT_TEMPLATE = """Answer the following medical question in 2-3 lines maximum using only the information provided in the context.
+CUSTOM_PROMPT_TEMPLATE = """
+You are a helpful, concise, and medically-informed AI assistant.
 
-Context:
+Using only the information from the provided context, answer the user's medical question in **2-3 lines**. If the answer is not present in the context, reply with:
+> "I'm sorry, I couldn't find enough information in the provided data to answer that question."
+
+Respond clearly and professionally in simple language that can be understood by a non-doctor.
+
+---
+
+📚 Context:
 {context}
 
-Question:
+❓ Question:
 {question}
 
-Answer:
+💬 Answer:
 """
 
 
